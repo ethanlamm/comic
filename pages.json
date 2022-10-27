@@ -1,0 +1,83 @@
+{
+	"pages": [ 
+		{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+				"navigationStyle":"custom",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/book/book",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "漫画",
+		"navigationBarBackgroundColor": "#6ebfb1",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#6ebfb1",
+		"borderStyle":"white",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/home/home",
+				"iconPath": "static/images/home_light.png",
+				"selectedIconPath": "static/images/home_fill_light.png"
+			},
+			{
+				"text": "书架",
+				"pagePath": "pages/book/book",
+				"iconPath": "static/images/book.png",
+				"selectedIconPath": "static/images/book-fill.png"
+			}
+		]
+	},
+	"subPackages": [
+		{
+			"root": "searchpkg",
+			"pages": [
+				{
+					"path": "search/search",
+					"style": {
+						"onReachBottomDistance": 100
+					}
+				}
+			]
+		},
+		{
+			"root": "comicpkg",
+			"pages": [
+				{
+					"path": "detail/detail"
+				},
+				{
+					"path": "content/content"
+				}
+			]
+		}
+	]
+	// "preloadRule":{
+	// 	"pages/home/home":{
+	// 		"network": "all",
+	// 		"packages": ["searchpkg"]
+	// 	},
+	// 	"pages/book/book":{
+	// 		"network": "all",
+	// 		"packages": ["comicpkg"]
+	// 	}
+	// }
+	
+}
